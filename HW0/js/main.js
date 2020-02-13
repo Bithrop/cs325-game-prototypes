@@ -14,8 +14,8 @@ function make_main_game_state( game )
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
 		//Adding a sky backround
-		var sky = this.add.image(0,0, 'sky');
-		sky.anchor.setTo(0,0);
+		var sky = this.add.image(0,1, 'sky');
+		
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
