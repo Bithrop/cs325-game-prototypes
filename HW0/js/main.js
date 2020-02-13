@@ -4,7 +4,7 @@ function make_main_game_state( game )
 {
     function preload() {
         // Load an image and call it 'logo'.
-        game.load.image( 'block', 'assets/block.png' );
+        game.load.image('block', 'assets/block.png' );
 		game.load.image('sky', 'assets/sky3.png');
     }
     
@@ -27,7 +27,7 @@ function make_main_game_state( game )
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
         // Make it bounce off of the world bounds.
-        bouncy.body.collideWorldBounds = true;
+        bouncy.body.collideWorldBounds = false;
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
@@ -42,7 +42,7 @@ function make_main_game_state( game )
         // in X or Y.
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
-        bouncy.rotation = game.physics.arcade.angleToPointer( bouncy);
+        bouncy.rotation = game.physics.arcade.angleToPointer(bouncy);
     }
     
     return { "preload": preload, "create": create, "update": update };
