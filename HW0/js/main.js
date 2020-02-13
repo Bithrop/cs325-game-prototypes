@@ -51,7 +51,7 @@ function make_main_game_state( game )
 			var block = game.add.sprite(0,0 'block');
 			this.blockPool.add(block);
 			
-			block.anchor.setTo(0.5, 0.5);
+			this.block.anchor.setTo(0.5, 0.5);
 			
 			this.game.physics.enable(block, Phaser.Physics.ARCADE);
 			
