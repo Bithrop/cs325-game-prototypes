@@ -14,7 +14,7 @@ function make_main_game_state( game )
 		
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
-        bouncy = game.add.sprite( game.world.centerX, game.world.bottomY, 'block' );
+        bouncy = game.add.sprite( game.world.centerX, game.world.bottom, 'block' );
 		
 		
 		
