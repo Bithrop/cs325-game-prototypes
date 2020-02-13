@@ -11,6 +11,9 @@ function make_main_game_state( game )
     var bouncy;
     
     function create() {
+		
+		
+		
 		//Adding a sky backround
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -34,6 +37,28 @@ function make_main_game_state( game )
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         var text = game.add.text( game.world.centerX, 15, "Check check.", style );
         text.anchor.setTo( 0.5, 0.0 );
+		
+		
+		//making shootable blocks
+		//fisrt start with constants
+		this.BLOCK_SPEED = 400;
+		this.NUMBER_Of_BLOCKS = 2;
+		
+		//making the pool of blocks
+		this.blockPool = game.add.group();
+		for(var i = 0; i < this.NUMBER_Of_BLOCKS; i++)
+		{
+			var block = game.add.sprite(0,0 'block');
+			this.blockPool.add(block);
+			
+			block.anchor.setTo(0.5, 0.5);
+			
+			this.game.physics.enable(block, Phaser.Physics.ARCADE);
+			
+			block.kill();
+		}
+		
+		
     }
     
     function update() {
