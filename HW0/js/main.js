@@ -51,13 +51,13 @@ function make_main_game_state( game )
 			var blocky;
 			blocky = this.game.add.sprite(0,0, 'block');
 			
-			this.blockPool.add(block);
+			this.blockPool.add(blocky);
 			
-			this.block.anchor.setTo(0.5, 0.5);
+			this.blocky.anchor.setTo(0.5, 0.5);
 			
-			this.game.physics.enable(block, Phaser.Physics.ARCADE);
+			this.game.physics.enable(blocky, Phaser.Physics.ARCADE);
 			
-			block.kill();
+			blocky.kill();
 		}
 		
 		
