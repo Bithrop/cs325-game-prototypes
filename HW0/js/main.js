@@ -4,7 +4,7 @@ function make_main_game_state( game )
 {
     function preload() {
         // Load an image and call it 'logo'.
-        game.load.image( 'logo', 'assets/phaser.png' );
+        game.load.image( 'block', 'assets/block.png' );
 		game.load.image('sky', 'assets/sky3.png');
     }
     
@@ -14,7 +14,7 @@ function make_main_game_state( game )
 		
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
-        bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
+        bouncy = game.add.sprite( game.world.centerX, 0.1, 'block' );
 		
 		
 		
