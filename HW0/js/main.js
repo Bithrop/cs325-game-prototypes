@@ -12,7 +12,7 @@ function make_main_game_state( game )
     
     function create() {
 		
-		
+		var sky = this.add.image(0,1, 'sky')
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
 		
@@ -22,7 +22,7 @@ function make_main_game_state( game )
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
         //Adding a sky backround
-		var sky = this.add.image(0,1, 'sky');
+		;
 		
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
