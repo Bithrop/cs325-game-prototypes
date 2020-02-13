@@ -22,7 +22,7 @@ function make_main_game_state( game )
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
         //Adding a sky backround
-		var sky = this.add.sprite(0,1, 'sky');
+		var sky = this.add.tileSprite(0,1, 'sky');
 		
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
