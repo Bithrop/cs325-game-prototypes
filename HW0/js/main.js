@@ -48,16 +48,16 @@ function make_main_game_state( game )
 		this.blockPool = game.add.group();
 		for(var i = 0; i < this.NUMBER_Of_BLOCKS; i++)
 		{
-			//var blocky;
-			//blocky = this.game.add.sprite(0,0 'block');
-			/*
+			var blocky;
+			blocky = this.game.add.sprite(0,0, 'block');
+			
 			this.blockPool.add(block);
 			
 			this.block.anchor.setTo(0.5, 0.5);
 			
 			this.game.physics.enable(block, Phaser.Physics.ARCADE);
-			*/
-			//block.kill();
+			
+			block.kill();
 		}
 		
 		
