@@ -55,8 +55,8 @@ function make_main_game_state( game )
 			this.block.anchor.setTo(0.5, 0.5);
 			
 			this.game.physics.enable(block, Phaser.Physics.ARCADE);
-			
-			block.kill();*/
+			*/
+			block.kill();
 		}
 		
 		
