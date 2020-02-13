@@ -48,7 +48,7 @@ function make_main_game_state( game )
 		this.blockPool = game.add.group();
 		for(var i = 0; i < this.NUMBER_Of_BLOCKS; i++)
 		{
-			var block = game.add.sprite(0,0 'block');
+			var block = this.game.add.sprite(0,0 'block');
 			/*
 			this.blockPool.add(block);
 			
