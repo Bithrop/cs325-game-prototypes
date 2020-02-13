@@ -42,14 +42,13 @@ function make_main_game_state( game )
 		//making shootable blocks
 		//fisrt start with constants
 		this.BLOCK_SPEED = 400;
-		this.NUMBER_Of_BLOCKS = 2;
+		this.NUMBER_Of_BLOCKS = 1;
 		
 		//making the pool of blocks
 		this.blockPool = game.add.group();
 		for(var i = 0; i < this.NUMBER_Of_BLOCKS; i++)
 		{
-			var blocky;
-			blocky = this.game.add.sprite(0,0, 'block');
+			var blocky = this.game.add.sprite(0,0, 'block');
 			
 			this.blockPool.add(blocky);
 			
