@@ -27,7 +27,7 @@ window.onload = function() {
         
         //load tiles for map
         game.load.image('tiles', 'assets/tiles.png');
-		//game.load.image('tiles', 'assets/fieldTiles.png');
+		//game.load.image('fieldTiles', 'assets/fieldTiles.png');
     }
     
     var map;
