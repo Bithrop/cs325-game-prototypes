@@ -49,7 +49,7 @@ function make_main_game_state( game )
     
     function update() {
 		
-		game.physics.arcade.overlap(bouncy, luigi, killLuigi(), null, this);
+		game.physics.arcade.overlap(bouncy, luigi, killLuigi(luigi), null, this);
 		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
@@ -62,7 +62,7 @@ function make_main_game_state( game )
     return { "preload": preload, "create": create, "update": update };
 }
 
-    function killLuigi() 
+    function killLuigi(luigi) 
 	{
 		
 		luigi.kill();
