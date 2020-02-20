@@ -10,7 +10,7 @@ function make_main_game_state( game )
     }
     
     var bouncy;
-    var luigi
+    var luigi;
     function create() {
 		
 		
