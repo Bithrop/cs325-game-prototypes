@@ -6,6 +6,7 @@ function make_main_game_state( game )
         // Load an image and call it 'logo'.
         game.load.image( 'Ghost2', 'assets/Ghost2.png' );
 		game.load.image('sky', 'assets/sky3.png');
+		game.load.image('luigi', 'assets/luigi.png');
     }
     
     var bouncy;
