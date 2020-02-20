@@ -41,8 +41,7 @@ function make_main_game_state( game )
         text.anchor.setTo( 0.5, 0.0 );
 		
 		
-		//making shootable blocks
-		//fisrt start with constants
+		
 		
 		
 		
@@ -50,7 +49,7 @@ function make_main_game_state( game )
     
     function update() {
 		
-		game.physics.arcade.overlap(bouncy, luigi, luigi.kill(), null, this);
+		game.physics.arcade.overlap(bouncy, luigi, killLuigi(), null, this);
 		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
