@@ -81,5 +81,7 @@ window.onload = function() {
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
         bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, this.game.input.activePointer, 500, 500, 500 );
+		//added colision to layer2
+		game.physics.arcade.collide(bouncy, layer2);
     }
 };
