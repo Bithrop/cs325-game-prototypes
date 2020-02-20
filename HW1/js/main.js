@@ -18,7 +18,7 @@ window.onload = function() {
     function preload() {
         // Load an image and call it 'logo'.
         game.load.image( 'logo', 'assets/phaser.png' );
-		game.load.image( 'Ghost', 'assets/Ghost.png' );
+		game.load.image( 'Ghost2', 'assets/Ghost2.png' );
         // load a tilemap and call it 'map'.
         // from .json file
         game.load.tilemap('map', 'assets/tilemap_example.json', null, Phaser.Tilemap.TILED_JSON);
@@ -63,12 +63,12 @@ window.onload = function() {
 		//map collision
         //map.setCollisionBetween(0, 12, true, layer2);
         // Create a sprite at the center of the screen using the 'logo' image.
-        bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost' );
+        bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
         
-		//bouncy.scale.setTo(0.5,0.5);
+		bouncy.scale.setTo(0.5,0.5);
 		//bouncy 2 for testing collide
 		bouncy2 = game.add.sprite( 300, 400, 'logo' );
 		
