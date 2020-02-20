@@ -4,7 +4,7 @@ function make_main_game_state( game )
 {
     function preload() {
         // Load an image and call it 'logo'.
-        game.load.image( 'block', 'assets/block.png' );
+        game.load.image( 'Ghost2', 'assets/Ghost2.png' );
 		game.load.image('sky', 'assets/sky3.png');
     }
     
@@ -17,7 +17,7 @@ function make_main_game_state( game )
 		//Adding a sky backround
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
-        bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'block' );
+        bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
 		
 		
 		
@@ -35,30 +35,13 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( game.world.centerX, 15, "Check check.", style );
+        var text = game.add.text( game.world.centerX, 15, "Kill all Luigis.", style );
         text.anchor.setTo( 0.5, 0.0 );
 		
 		
 		//making shootable blocks
 		//fisrt start with constants
-		this.BLOCK_SPEED = 400;
-		this.NUMBER_Of_BLOCKS = 2;
 		
-		//making the pool of blocks
-		this.blockPool = game.add.group();
-		for(var i = 0; i < this.NUMBER_Of_BLOCKS; i++)
-		{
-			var blocky;
-			blocky = this.game.add.sprite(0,0, 'block');
-			
-			this.blockPool.add(blocky);
-			
-			this.blocky.anchor.setTo(0.5, 0.5);
-			
-			this.game.physics.enable(blocky, Phaser.Physics.ARCADE);
-			
-			blocky.kill();
-		}
 		
 		
     }
@@ -69,7 +52,7 @@ function make_main_game_state( game )
         // in X or Y.
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
-        bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 0, 0, 500 );
+        bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 100, 100, 400 );
     }
     
     return { "preload": preload, "create": create, "update": update };
