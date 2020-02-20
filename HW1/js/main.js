@@ -32,6 +32,7 @@ window.onload = function() {
     var layer1;
 	var layer2
     var bouncy;
+	var bouncy2
     
     function create() {
 		
