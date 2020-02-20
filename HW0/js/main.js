@@ -65,7 +65,7 @@ function make_main_game_state( game )
     function killLuigi(luigi) 
 	{
 		
-		luigi.kill();
+		luigi.destroy();
 		
 		
 		
