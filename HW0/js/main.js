@@ -6,7 +6,7 @@ function make_main_game_state( game )
         // Load an image and call it 'logo'.
         game.load.image( 'Ghost2', 'assets/Ghost2.png' );
 		game.load.image('sky', 'assets/sky3.png');
-		game.load.image('luigi', 'assets/luigi.png');
+		game.load.image('luigi2', 'assets/luigi2.png');
     }
     
     var bouncy;
@@ -19,7 +19,7 @@ function make_main_game_state( game )
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
-		game.add.sprite(300,300,'luigi');
+		game.add.sprite(300,300,'luigi2').scale.setTo(0.2,0.2);
 		
 		
         // Anchor the sprite at its center, as opposed to its top-left corner.
