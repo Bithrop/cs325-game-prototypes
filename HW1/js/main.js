@@ -78,7 +78,7 @@ window.onload = function() {
         
         game.camera.follow(bouncy);
         //test colider
-		game.physics.add.collider(bouncy, layer2);
+		//game.physics.add.collider(bouncy, layer2);
     }
     
     function update() {
