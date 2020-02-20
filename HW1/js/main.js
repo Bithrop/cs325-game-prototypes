@@ -33,6 +33,8 @@ window.onload = function() {
     var bouncy;
     
     function create() {
+		
+		game.physics.startSystem(Phaser.Physics.ARCADE);
         // Create the map. 
         map = game.add.tilemap('map');
         // for csv files specify the tile size.
