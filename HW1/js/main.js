@@ -80,7 +80,7 @@ window.onload = function() {
         game.camera.follow(bouncy);
         //test colider
 		layer1.setCollisionBetween(1,50);
-		
+		asfasf
 		
 		this.physics.add.collider(bouncy, layer1);
     }
