@@ -26,8 +26,7 @@ window.onload = function() {
         //game.load.tilemap('map', 'assets/tilemap_example.csv', null, Phaser.Tilemap.CSV);
         
         //load tiles for map
-        game.load.image('tiles', 'assets/fieldTiles.png');
-		game.load.image('tiles', 'assets/tiles.png');
+        game.load.image('tiles', 'assets/tiles.png');
 		
     }
     
@@ -46,8 +45,7 @@ window.onload = function() {
         //map = game.add.tilemap('map', 32, 32);
         
         //add tiles
-        map.addTilesetImage('fieldTiles');
-		map.addTilesetImage('tiles');
+        map.addTilesetImage('tiles');
 		
         //test colider
 		map.setCollisionBetween(0,1, true, layer1);
