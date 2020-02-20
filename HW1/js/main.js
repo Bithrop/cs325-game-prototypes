@@ -27,7 +27,7 @@ window.onload = function() {
         
         //load tiles for map
         game.load.image('tiles', 'assets/tiles.png');
-		game.load.image('tiles', 'assets/fieldTiles.png');
+		//game.load.image('tiles', 'assets/fieldTiles.png');
     }
     
     var map;
@@ -46,7 +46,7 @@ window.onload = function() {
         
         //add tiles
         map.addTilesetImage('tiles');
-		map.addTilesetImage('fieldTiles');
+		//map.addTilesetImage('fieldTiles');
 		
         //test colider
 		map.setCollisionBetween(0,1, true, layer1);
