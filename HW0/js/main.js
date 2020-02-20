@@ -64,7 +64,7 @@ function make_main_game_state( game )
 
     function killLuigi(luigi) 
 	{
-		
+		text.text = "You did it!";
 		luigi.kill;
 		
 		
