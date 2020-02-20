@@ -65,8 +65,12 @@ window.onload = function() {
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
         
+		//bouncy 2 for testing collide
+		bouncy2 = game.add.sprite( 300, 400, 'logo' );
+		
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
+		game.physics.enable( bouncy2, Phaser.Physics.ARCADE );
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
         
@@ -80,9 +84,9 @@ window.onload = function() {
         game.camera.follow(bouncy);
         //test colider
 		layer1.setCollisionBetween(1,50);
-		asfasf
 		
-		this.physics.add.collider(bouncy, layer1);
+		
+		this.physics.add.collider(bouncy, bouncy2);
     }
     
     function update() {
