@@ -46,6 +46,7 @@ window.onload = function() {
         
         //add tiles
         map.addTilesetImage('tiles');
+		map.addTilesetImage('fieldTiles');
 		
         //test colider
 		map.setCollisionBetween(0,1, true, layer1);
