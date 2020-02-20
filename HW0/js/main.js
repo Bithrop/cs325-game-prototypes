@@ -21,7 +21,7 @@ function make_main_game_state( game )
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
 		//add a luigi to later be killed
 		luigi = game.add.sprite(500,500,'luigi2');
-		luigi.scale.setTo(0.2,0.2);
+		luigi.scale.setTo(0.1,0.1);
 		
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
@@ -49,7 +49,7 @@ function make_main_game_state( game )
     
     function update() {
 		
-		game.physics.arcade.overlap(bouncy, luigi, killLuigi(luigi), null, this);
+		
 		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
@@ -57,6 +57,10 @@ function make_main_game_state( game )
         // This function returns the rotation angle that makes it visually match its
         // new trajectory.
         bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 100, 100, 400 );
+		
+		//update for overlap
+		game.physics.arcade.overlap(bouncy, luigi, killLuigi(luigi), null, this);
+		
     }
     
     return { "preload": preload, "create": create, "update": update };
