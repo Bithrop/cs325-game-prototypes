@@ -30,6 +30,7 @@ window.onload = function() {
     
     var map;
     var layer1;
+	var layer2
     var bouncy;
     
     function create() {
@@ -48,7 +49,7 @@ window.onload = function() {
         // Create a layer from the map
         //using the layer name given in the .json file
         layer1 = map.createLayer('Tile Layer 1');
-		var layer2 = map.createLayer('Tile Layer 2');
+		layer2 = map.createLayer('Tile Layer 2');
         //for csv files
         //layer1 = map.createLayer(0);
         
@@ -78,7 +79,10 @@ window.onload = function() {
         
         game.camera.follow(bouncy);
         //test colider
-		//game.physics.add.collider(bouncy, layer2);
+		layer1.setCollisionBetween(1,50);
+		
+		
+		this.physics.add.collider(bouncy, layer1);
     }
     
     function update() {
