@@ -45,7 +45,7 @@ window.onload = function() {
         //map = game.add.tilemap('map', 32, 32);
         
         //add tiles
-        map.addTilesetImage('tiles');
+        map.addTilesetImage('fieldTiles');
 		
         //test colider
 		map.setCollisionBetween(0,1, true, layer1);
