@@ -45,7 +45,8 @@ window.onload = function() {
         //add tiles
         map.addTilesetImage('tiles');
 		
-        
+        //test colider
+		map.setCollisionBetween(0,1, true, layer1);
 		
         // Create a layer from the map
         //using the layer name given in the .json file
@@ -84,8 +85,7 @@ window.onload = function() {
         text.anchor.setTo( 0.5, 0.0 );
         
         game.camera.follow(bouncy);
-        //test colider
-		layer1.setCollisionBetween(1,50);
+        
 		
 		
 		//this.physics.add.collider(bouncy, bouncy2);
@@ -94,7 +94,7 @@ window.onload = function() {
     function update() {
 		//added colision to layer2
 		game.physics.arcade.collide(bouncy, bouncy2);
-		//game.physics.accade.collide(bouncy, layer1);
+		game.physics.accade.collide(bouncy, layer1);
 		
 		
         // Accelerate the 'logo' sprite towards the cursor,
