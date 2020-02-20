@@ -26,7 +26,8 @@ window.onload = function() {
         //game.load.tilemap('map', 'assets/tilemap_example.csv', null, Phaser.Tilemap.CSV);
         
         //load tiles for map
-        game.load.image('tiles', 'assets/tiles.png');
+        game.load.image('tiles', 'assets/fieldTiles.png');
+		
     }
     
     var map;
