@@ -64,7 +64,7 @@ function make_main_game_state( game )
 
     function killLuigi(luigi) 
 	{
-		text.text = "You did it!";
+		var text = game.add.text(game.world.centerX , 20 , "You did it!", style);
 		luigi.kill;
 		
 		
