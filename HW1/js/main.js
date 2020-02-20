@@ -92,7 +92,7 @@ window.onload = function() {
     
     function update() {
 		//added colision to layer2
-		//game.physics.arcade.collide(bouncy, layer2);
+		game.physics.arcade.collide(bouncy, bouncy2);
 		
 		
         // Accelerate the 'logo' sprite towards the cursor,
