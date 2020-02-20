@@ -57,7 +57,7 @@ window.onload = function() {
 		layer2.resizeWorld();
 		
 		//map collision
-        map.setCollisionBetween(0, 12, true, layer2);
+        //map.setCollisionBetween(0, 12, true, layer2);
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
         // Anchor the sprite at its center, as opposed to its top-left corner.
