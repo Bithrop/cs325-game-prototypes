@@ -40,8 +40,8 @@ window.onload = function() {
         
         //add tiles
         map.addTilesetImage('tiles');
-		//map collision
-        map.setCollisionBetween(0, 12);
+		
+        
 		
         // Create a layer from the map
         //using the layer name given in the .json file
@@ -53,7 +53,9 @@ window.onload = function() {
         //  Resize the world
         layer1.resizeWorld();
 		layer2.resizeWorld();
-        
+		
+		//map collision
+        map.setCollisionBetween(0, 12, true, layer2);
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
         // Anchor the sprite at its center, as opposed to its top-left corner.
