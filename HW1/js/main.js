@@ -72,13 +72,13 @@ window.onload = function() {
         
         game.camera.follow(bouncy);
         //test colider
-		game.physics.add.collider(bouncy, layer2);
+		
     }
     
     function update() {
 		//added colision to layer2
 		//game.physics.arcade.collide(bouncy, layer2);
-		
+		game.physics.add.collider(bouncy, layer2);
 		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
