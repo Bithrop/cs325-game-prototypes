@@ -87,7 +87,7 @@ window.onload = function() {
 		layer1.setCollisionBetween(1,50);
 		
 		
-		this.physics.add.collider(bouncy, bouncy2);
+		//this.physics.add.collider(bouncy, bouncy2);
     }
     
     function update() {
