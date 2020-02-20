@@ -68,7 +68,7 @@ window.onload = function() {
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
         
-		bouncy.scale.setTo(0.5,0.5);
+		//bouncy.scale.setTo(0.5,0.5);
 		//bouncy 2 for testing collide
 		bouncy2 = game.add.sprite( 300, 400, 'logo' );
 		
