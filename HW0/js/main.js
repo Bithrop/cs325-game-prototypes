@@ -10,7 +10,7 @@ function make_main_game_state( game )
     }
     
     var bouncy;
-    
+    var luigi
     function create() {
 		
 		
@@ -19,7 +19,8 @@ function make_main_game_state( game )
 		var sky = this.add.image(0,1, 'sky');
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
-		game.add.sprite(300,300,'luigi2').scale.setTo(0.2,0.2);
+		//add a luigi to later be killed
+		luigi = game.add.sprite(500,500,'luigi2').scale.setTo(0.2,0.2);
 		
 		
         // Anchor the sprite at its center, as opposed to its top-left corner.
@@ -48,6 +49,9 @@ function make_main_game_state( game )
     }
     
     function update() {
+		
+		game.physics.arcade.overlap(bouncy, luigi, killLuigi, null, this);
+		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
         // in X or Y.
@@ -59,6 +63,15 @@ function make_main_game_state( game )
     return { "preload": preload, "create": create, "update": update };
 }
 
+    function killLuigi() 
+	{
+		
+		luigi.kill();
+		
+		
+		
+		
+	}
 
 window.onload = function() {
     // You might want to start with a template that uses GameStates:
