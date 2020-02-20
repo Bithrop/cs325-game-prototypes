@@ -54,8 +54,17 @@
          "tilewidth":32
         }, 
         {
+         "columns":17,
          "firstgid":3,
-         "source":"fieldTiles.tsx"
+         "image":"fieldTiles.png",
+         "imageheight":329,
+         "imagewidth":568,
+         "margin":0,
+         "name":"fieldTiles",
+         "spacing":0,
+         "tilecount":170,
+         "tileheight":32,
+         "tilewidth":32
         }],
  "tilewidth":32,
  "type":"map",
