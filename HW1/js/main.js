@@ -72,7 +72,7 @@ window.onload = function() {
 		
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
-		//game.physics.enable( bouncy2, Phaser.Physics.ARCADE );
+		game.physics.enable( bouncy2, Phaser.Physics.ARCADE );
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
 		bouncy2.body.collideWorldBounds = true;
