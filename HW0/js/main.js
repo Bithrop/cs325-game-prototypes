@@ -31,7 +31,7 @@ function make_main_game_state( game )
         game.physics.enable( bouncy, Phaser.Physics.ARCADE );
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
-        
+        bouncy.scale.setTo(0.01,0.01);
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
