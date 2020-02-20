@@ -55,13 +55,13 @@ window.onload = function() {
         // Create a layer from the map
         //using the layer name given in the .json file
         layer1 = map.createLayer('Tile Layer 1');
-		layer2 = map.createLayer('Tile Layer 2');
+		//layer2 = map.createLayer('Tile Layer 2');
         //for csv files
         //layer1 = map.createLayer(0);
         
         //  Resize the world
         layer1.resizeWorld();
-		layer2.resizeWorld();
+		//layer2.resizeWorld();
 		
 		//map collision
         //map.setCollisionBetween(0, 12, true, layer2);
