@@ -20,8 +20,8 @@ function make_main_game_state( game )
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'Ghost2' );
 		//add a luigi to later be killed
-		luigi = game.add.sprite(500,500,'luigi2').scale.setTo(0.2,0.2);
-		
+		luigi = game.add.sprite(500,500,'luigi2');
+		luigi.scale.setTo(0.2,0.2);
 		
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
@@ -62,10 +62,10 @@ function make_main_game_state( game )
     return { "preload": preload, "create": create, "update": update };
 }
 
-    function killLuigi(player, luigi) 
+    function killLuigi(luigi) 
 	{
 		
-		luigi.kill();
+		luigi.kill;
 		
 		
 		
