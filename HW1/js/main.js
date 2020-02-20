@@ -40,7 +40,9 @@ window.onload = function() {
         
         //add tiles
         map.addTilesetImage('tiles');
-        
+		//map collision
+        map.setCollisionBetween(1, 12);
+		
         // Create a layer from the map
         //using the layer name given in the .json file
         layer1 = map.createLayer('Tile Layer 1');
@@ -78,7 +80,7 @@ window.onload = function() {
     function update() {
 		//added colision to layer2
 		//game.physics.arcade.collide(bouncy, layer2);
-		game.physics.add.collider(bouncy, layer2);
+		game.physics.add.collide(bouncy, layer2);
 		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
