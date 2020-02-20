@@ -62,10 +62,10 @@ function make_main_game_state( game )
     return { "preload": preload, "create": create, "update": update };
 }
 
-    function killLuigi(luigi) 
+    function killLuigi(player, luigi) 
 	{
 		
-		luigi.destroy();
+		luigi.kill();
 		
 		
 		
