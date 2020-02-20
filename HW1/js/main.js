@@ -84,7 +84,7 @@ window.onload = function() {
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( 400, 15, "Test test test test.", style );
+        var text = game.add.text( 400, 15, "Test test test test!!!!!!", style );
         text.fixedToCamera = true;
         text.anchor.setTo( 0.5, 0.0 );
         
