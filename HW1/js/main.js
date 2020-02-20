@@ -44,11 +44,13 @@ window.onload = function() {
         // Create a layer from the map
         //using the layer name given in the .json file
         layer1 = map.createLayer('Tile Layer 1');
+		var layer2 = map.createLayer('Tile Layer 2');
         //for csv files
         //layer1 = map.createLayer(0);
         
         //  Resize the world
         layer1.resizeWorld();
+		layer2.resizeWorld();
         
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
