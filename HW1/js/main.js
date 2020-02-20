@@ -71,12 +71,13 @@ window.onload = function() {
         text.anchor.setTo( 0.5, 0.0 );
         
         game.camera.follow(bouncy);
-        
+        //test colider
+		this.physics.add.collider(bouncy, layer2);
     }
     
     function update() {
 		//added colision to layer2
-		game.physics.arcade.collide(bouncy, layer2);
+		//game.physics.arcade.collide(bouncy, layer2);
 		
 		
         // Accelerate the 'logo' sprite towards the cursor,
