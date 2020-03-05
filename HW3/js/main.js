@@ -25,6 +25,7 @@ function make_main_game_state( game )
         // Create a sprite at the center of the screen using the 'logo' image.
 		noise = game.add.audio('cock');
 		farm = game.add.sprite(game.world.centerX, game.world.centerY, 'farm');
+		farm.anchor.setTo( 0.5, 0.5 );
 		noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
