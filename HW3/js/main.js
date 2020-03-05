@@ -146,9 +146,10 @@ function make_main_game_state( game )
 		if((bouncy.x <( game.world.length - 20)) || (bouncy.x > 820) || (bouncy.y > 620) || (bouncy.y < 0))
 		{
 			console.log("chicken is dead!!!!!!!!!!!!");
-			var style = { font: "25px Verdana", fill: "#9909af", align: "center" };
-			var over = game.add.text(game.world.centerX - 80, game.world.centerY, "Game Over \nScore is: " + score, style);
+			var style = { font: "25px Verdana", fill: "#9509cf", align: "center" };
+			var over = game.add.text(game.world.centerX - 80, game.world.centerY, "You Suck\nScore is: " + score, style);
 			bouncy.kill();
+			texts.kill();
 		}
 		
     }
