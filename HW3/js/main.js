@@ -9,7 +9,8 @@ function make_main_game_state( game )
     
     var bouncy;
     var cursors;
-	
+	var movLeft = false;
+	var movRight = false;
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
@@ -34,15 +35,24 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		if(cursors.left.isDown)
 		{
-			
+			movLeft = true;
+			movRight = false;
+			while(movLeft == true)
+			{
+				
+				
 			console.log("help");
 			bouncy.x -= 10;
+			}
 			//bouncy.body.moveLeft(400);
 			
 		}
 		if(cursors.right.isDown)
 		{
-			
+			movRight = true;
+			movLeft = false;
+			while(movRight == true)
+			{
 			console.log("help");
 			bouncy.x += 10;
 			//bouncy.body.moveLeft(400);
