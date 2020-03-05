@@ -5,6 +5,7 @@ function make_main_game_state( game )
     function preload() {
         // Load an image and call it 'logo'.
         game.load.image( 'logo', 'assets/phaser.png' );
+		game.load.spritesheet('chicken', 'assets/chicken.png', 32, 32);
     }
     
     var bouncy;
@@ -26,7 +27,7 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( game.world.centerX, 15, "Test test test.", style );
+        var text = game.add.text( game.world.centerX, 15, "Test test test test.", style );
         text.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
     }
