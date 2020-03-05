@@ -9,6 +9,7 @@ function make_main_game_state( game )
     
     var bouncy;
     var cursors;
+	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
@@ -33,8 +34,9 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity();
 		if(cursors.left.isDown)
 		{
-			bouncy.body.moveLeft(400);
 			console.log("help");
+			bouncy.body.moveLeft(400);
+			
 		}
 		
         // Accelerate the 'logo' sprite towards the cursor,
