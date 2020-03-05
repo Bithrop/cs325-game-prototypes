@@ -147,7 +147,7 @@ function make_main_game_state( game )
 		{
 			console.log("chicken is dead!!!!!!!!!!!!");
 			var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-			var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
+			var over = game.add.text(game.world.centerX - 20, game.world.centerY, "Game Over \n Score is: " + score, style);
 			bouncy.kill();
 		}
 		
