@@ -8,6 +8,7 @@ function make_main_game_state( game )
 		game.load.spritesheet('chicken', 'assets/chicken.png', 32, 32);
 		game.load.image( 'egg', 'assets/egg.png' );
 		game.load.audio('cock', 'assets/Cockadoodledoo-sound.mp3');
+		game load.image('farm', 'assets/farm.png');
     }
     
     var bouncy;
@@ -19,9 +20,11 @@ function make_main_game_state( game )
 	var speed = 5;
 	var texts;
 	var noise;
+	var farm
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
 		noise = game.add.audio('cock');
+		farm = game.add.sprite(game.world.centerX, game.world.centerY, 'fark');
 		noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
