@@ -38,7 +38,7 @@ function make_main_game_state( game )
     
 	function eggGet()
 	{
-		console.loh("egg");
+		console.log("egg");
 	}
 	
 	
