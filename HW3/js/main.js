@@ -38,7 +38,7 @@ function make_main_game_state( game )
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         var texts = game.add.text( game.world.centerX, 15, "Total eggs got: " + score , style );
-        text.anchor.setTo( 0.5, 0.0 );
+        texts.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
     }
     
