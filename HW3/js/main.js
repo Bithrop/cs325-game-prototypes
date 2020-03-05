@@ -35,27 +35,17 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		if(cursors.left.isDown)
 		{
-			movLeft = true;
-			movRight = false;
-			while(movLeft == true)
-			{
-				
-				
+			
 			console.log("help");
 			bouncy.x -= 10;
-			}
 			//bouncy.body.moveLeft(400);
 			
 		}
 		if(cursors.right.isDown)
 		{
-			movRight = true;
-			movLeft = false;
-			while(movRight == true)
-			{
+			
 			console.log("help");
 			bouncy.x += 10;
-			}
 			//bouncy.body.moveLeft(400);
 			
 		}
