@@ -39,7 +39,7 @@ function make_main_game_state( game )
     
 	function eggGet()
 	{
-		egg.reset(game.world.centerX, game.world.centerY);
+		egg = egg.reset(game.world.centerX, game.world.centerY);
 		score++;
 		console.log("egg: " + score);
 	}
