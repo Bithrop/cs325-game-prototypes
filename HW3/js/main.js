@@ -142,10 +142,13 @@ function make_main_game_state( game )
 			bouncy.y += speed;
 		}
         
-		//testing
+		//testing for kill
 		if((bouncy.x <( game.world.length - 20)) || (bouncy.x > 820) || (bouncy.y > 620) || (bouncy.y < 0))
 		{
-			console.log("YAAAAAAAAY!");
+			console.log("chicken is dead!!!!!!!!!!!!");
+			var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
+			var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
+			bouncy.kill();
 		}
 		
     }
