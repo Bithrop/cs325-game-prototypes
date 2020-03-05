@@ -55,7 +55,7 @@ function make_main_game_state( game )
 		speed++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
-		noise.play();
+		noise.play('cock');
 		texts.setText("Total eggs got: " + score);
 	}
 	
