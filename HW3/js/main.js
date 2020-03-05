@@ -31,7 +31,7 @@ function make_main_game_state( game )
     }
     
     function update() {
-		bouncy.body.setZeroVelocity();
+		bouncy.body.setZeroVelocity;
 		if(cursors.left.isDown)
 		{
 			console.log("help");
