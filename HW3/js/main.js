@@ -34,8 +34,10 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		if(cursors.left.isDown)
 		{
+			
 			console.log("help");
-			bouncy.body.moveLeft(400);
+			bouncy.x -= 10;
+			//bouncy.body.moveLeft(400);
 			
 		}
 		
