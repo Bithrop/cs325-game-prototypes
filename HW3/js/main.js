@@ -10,8 +10,8 @@ function make_main_game_state( game )
     
     var bouncy;
     var cursors;
-	var movLeft = false;
-	var movRight = false;
+	var movLeft, movRight, movDown, moveUp = false;
+	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
@@ -39,7 +39,7 @@ function make_main_game_state( game )
 			movLeft = true;
 			movRight = false;
 			console.log("help");
-			bouncy.x -= 1;
+			
 			//bouncy.body.moveLeft(400);
 			
 		}
@@ -48,7 +48,29 @@ function make_main_game_state( game )
 			movRight = true;
 			movLeft = false;
 			console.log("help");
-			bouncy.x += 1;
+			
+			//bouncy.body.moveLeft(400);
+			
+		}
+		if(cursors.up.isDown)
+		{
+			movRight = false;
+			movLeft = false;
+			movDown = false;
+			movUp = true;
+			console.log("help2");
+			
+			//bouncy.body.moveLeft(400);
+			
+		}
+		if(cursors.down.isDown)
+		{
+			movRight = false;
+			movLeft = false;
+			movUp = false;
+			movDown = true;
+			console.log("help2");
+			
 			//bouncy.body.moveLeft(400);
 			
 		}
@@ -59,6 +81,14 @@ function make_main_game_state( game )
 		if(movRight)
 		{
 			bouncy.x += 10;
+		}
+		if(movUp)
+		{
+			bouncy.y += 10;
+		}
+		if(movDown)
+		{
+			bouncy.y -= 10;
 		}
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
