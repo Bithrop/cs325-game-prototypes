@@ -26,9 +26,16 @@ function make_main_game_state( game )
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         var text = game.add.text( game.world.centerX, 15, "Build something amazing.", style );
         text.anchor.setTo( 0.5, 0.0 );
+		cursors = game.input.keyboard.creatCursorKeys();
     }
     
     function update() {
+		bouncy.body.setZeroVelocity();
+		if(cursors.left.isDown)
+		{
+			bouncy.body.moveLeft(400);
+		}
+		
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
         // in X or Y.
