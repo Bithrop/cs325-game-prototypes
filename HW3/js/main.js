@@ -55,6 +55,7 @@ function make_main_game_state( game )
 			{
 			console.log("help");
 			bouncy.x += 10;
+			}
 			//bouncy.body.moveLeft(400);
 			
 		}
