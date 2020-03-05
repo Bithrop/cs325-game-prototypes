@@ -42,7 +42,7 @@ function make_main_game_state( game )
 		cursors = game.input.keyboard.createCursorKeys();
     }
     
-	function eggGet(texts, egg)
+	function eggGet(bouncy, egg)
 	{
 		
 		egg.kill();
