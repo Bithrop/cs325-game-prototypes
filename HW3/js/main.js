@@ -133,7 +133,7 @@ function make_main_game_state( game )
 		}
         
 		//testing
-		if((bouncy.x <( game.world.length - 10)) || (bouncy.x > 810) || (bouncy.y > 810) || (bouncy.y < -10))
+		if((bouncy.x <( game.world.length - 20)) || (bouncy.x > 820) || (bouncy.y > 820) || (bouncy.y < 20))
 		{
 			console.log("YAAAAAAAAY!");
 		}
