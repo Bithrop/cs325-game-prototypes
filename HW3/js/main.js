@@ -22,6 +22,7 @@ function make_main_game_state( game )
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
 		noise = game.add.audio('cock');
+		noise.addMarker('cock', 1, 1.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
         // Anchor the sprite at its center, as opposed to its top-left corner.
@@ -54,7 +55,7 @@ function make_main_game_state( game )
 		speed++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
-		noise.play('cock');
+		noise.play();
 		texts.setText("Total eggs got: " + score);
 	}
 	
