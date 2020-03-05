@@ -12,17 +12,20 @@ function make_main_game_state( game )
     var bouncy;
     var cursors;
 	var movLeft, movRight, movDown, movUp = false;
-	var egg;
+	var eggs;
 	var score = 0;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
+		eggs = game.add.group();
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
-        
+		//used for reseting eggs, may make more.
+		
+        eggs.add(egg);
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE);
 		game.physics.enable(egg, Phaser.Physics.ARCADE);
@@ -37,9 +40,9 @@ function make_main_game_state( game )
 		cursors = game.input.keyboard.createCursorKeys();
     }
     
-	function eggGet()
+	function eggGet(bouncy, egg)
 	{
-		egg = egg.reset(game.world.centerX, game.world.centerY);
+		egg.reset(game.world.centerX, game.world.centerY);
 		score++;
 		console.log("egg: " + score);
 	}
@@ -47,7 +50,7 @@ function make_main_game_state( game )
 	
     function update() {
 		//bouncy.body.setZeroVelocity;
-		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
+		game.physics.arcade.overlap(bouncy, eggs, eggGet, null, this);
 		if(cursors.left.isDown)
 		{
 			movLeft = true;
