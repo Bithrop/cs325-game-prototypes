@@ -10,7 +10,7 @@ function make_main_game_state( game )
     
     var bouncy;
     var cursors;
-	var movLeft, movRight, movDown, moveUp = false;
+	var movLeft, movRight, movDown, movUp = false;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
