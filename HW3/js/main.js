@@ -57,7 +57,7 @@ function make_main_game_state( game )
 	function chickenLose()
 	{
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
+		var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
 		bouncy.kill();
 	}
 	
