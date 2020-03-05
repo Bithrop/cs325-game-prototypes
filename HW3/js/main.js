@@ -25,6 +25,7 @@ function make_main_game_state( game )
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
+		bouncy.enableBody = true;
 		//used for reseting eggs, may make more.
 		
         
@@ -56,6 +57,7 @@ function make_main_game_state( game )
 	
 	function chickenLose()
 	{
+		console.log("chicken is dead!!!!!!!!!!!!');
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
 		var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
 		bouncy.kill();
