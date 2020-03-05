@@ -44,7 +44,7 @@ function make_main_game_state( game )
 	{
 		eggs.remove(egg);
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
-		eggs.add(egg2);
+		eggs.add(egg);
 		score++;
 		console.log("egg: " + score);
 	}
