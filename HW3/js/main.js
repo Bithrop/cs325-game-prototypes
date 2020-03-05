@@ -8,7 +8,7 @@ function make_main_game_state( game )
     }
     
     var bouncy;
-    
+    var cursors;
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'logo' );
