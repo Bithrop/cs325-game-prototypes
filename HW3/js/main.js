@@ -23,7 +23,8 @@ function make_main_game_state( game )
         bouncy.anchor.setTo( 0.5, 0.5 );
         
         // Turn on the arcade physics engine for this sprite.
-        game.physics.enable( bouncy);
+        game.physics.enable( bouncy, Phaser.Physics.ARCADE);
+		game.physics.enable(egg, Phaser.Physics.ARCADE);
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
         
