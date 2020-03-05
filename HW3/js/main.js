@@ -42,7 +42,7 @@ function make_main_game_state( game )
     
 	function eggGet(bouncy, egg)
 	{
-		egg.kill()
+		egg.kill();
 		var egg2 = (game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
 		eggs.edd(egg2);
 		score++;
