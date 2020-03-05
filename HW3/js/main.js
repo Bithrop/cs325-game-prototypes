@@ -15,10 +15,11 @@ function make_main_game_state( game )
 	var eggs;
 	var egg;
 	var score = 0;
+	var speed;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
-		eggs = game.add.group();
+		
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
         // Anchor the sprite at its center, as opposed to its top-left corner.
@@ -26,7 +27,7 @@ function make_main_game_state( game )
         bouncy.anchor.setTo( 0.5, 0.5 );
 		//used for reseting eggs, may make more.
 		
-        eggs.add(egg);
+        
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE);
 		game.physics.enable(egg, Phaser.Physics.ARCADE);
@@ -36,21 +37,19 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( game.world.centerX, 15, "Test test test test test!!!.", style );
+        var texts = game.add.text( game.world.centerX, 15, "Total eggs got: " + score , style );
         text.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
     }
     
 	function eggGet(bouncy, egg)
 	{
-		//eggs.remove(egg);
-		//egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
-		//eggs.add(egg);
+		
 		egg.kill();
 		score++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
-		
+		texts = texts.setText("Total eggs got: " + score);
 	}
 	
 	
