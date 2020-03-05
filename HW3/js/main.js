@@ -36,8 +36,15 @@ function make_main_game_state( game )
 		cursors = game.input.keyboard.createCursorKeys();
     }
     
+	function eggGet()
+	{
+		console.loh("egg");
+	}
+	
+	
     function update() {
 		//bouncy.body.setZeroVelocity;
+		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
 		if(cursors.left.isDown)
 		{
 			movLeft = true;
