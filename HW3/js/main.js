@@ -40,7 +40,14 @@ function make_main_game_state( game )
 			//bouncy.body.moveLeft(400);
 			
 		}
-		
+		if(cursors.right.isDown)
+		{
+			
+			console.log("help");
+			bouncy.x += 10;
+			//bouncy.body.moveLeft(400);
+			
+		}
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
         // in X or Y.
