@@ -16,7 +16,7 @@ function make_main_game_state( game )
 	var egg;
 	var score = 0;
 	var speed;
-	var texts
+	var texts;
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
 		
