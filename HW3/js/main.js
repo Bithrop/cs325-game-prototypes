@@ -17,7 +17,7 @@ function make_main_game_state( game )
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
-		egg = game.add.sprite(game.rnd.integer(), game.rnd.integer(), 'egg');
+		egg = game.add.sprite(game.rnd.integerInRange(100, 200), game.rnd.integerInRange(100, 200), 'egg');
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
@@ -30,7 +30,7 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( game.world.centerX, 15, "Test test test test.", style );
+        var text = game.add.text( game.world.centerX, 15, "Test test test test test.", style );
         text.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
     }
