@@ -15,7 +15,7 @@ function make_main_game_state( game )
 	var eggs;
 	var egg;
 	var score = 0;
-	var speed;
+	var speed = 5;
 	var texts;
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -47,6 +47,7 @@ function make_main_game_state( game )
 		
 		egg.kill();
 		score++;
+		speed++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
 		
@@ -57,6 +58,7 @@ function make_main_game_state( game )
     function update() {
 		//bouncy.body.setZeroVelocity;
 		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
+		//if statements for checking if it should switch to be going down, up, left or right
 		if(cursors.left.isDown)
 		{
 			movLeft = true;
@@ -101,28 +103,24 @@ function make_main_game_state( game )
 			//bouncy.body.moveLeft(400);
 			
 		}
+		//if statements that actually move the player
 		if(movLeft)
 		{
-			bouncy.x -= 10;
+			bouncy.x -= speed;
 		}
 		if(movRight)
 		{
-			bouncy.x += 10;
+			bouncy.x += speed;
 		}
 		if(movUp)
 		{
-			bouncy.y -= 10;
+			bouncy.y -= speed;
 		}
 		if(movDown)
 		{
-			bouncy.y += 10;
+			bouncy.y += speed;
 		}
-        // Accelerate the 'logo' sprite towards the cursor,
-        // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
-        // in X or Y.
-        // This function returns the rotation angle that makes it visually match its
-        // new trajectory.
-        //bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 500, 500, 500 );
+        
     }
     
     return { "preload": preload, "create": create, "update": update };
