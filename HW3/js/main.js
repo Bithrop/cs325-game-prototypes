@@ -6,15 +6,18 @@ function make_main_game_state( game )
         // Load an image and call it 'logo'.
         game.load.image( 'logo', 'assets/phaser.png' );
 		game.load.spritesheet('chicken', 'assets/chicken.png', 32, 32);
+		game.load.image( 'egg', 'assets/egg.png' );
     }
     
     var bouncy;
     var cursors;
 	var movLeft, movRight, movDown, movUp = false;
+	var egg;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
+		
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
@@ -37,6 +40,8 @@ function make_main_game_state( game )
 		if(cursors.left.isDown)
 		{
 			movLeft = true;
+			movUp = false
+			movDown = false;
 			movRight = false;
 			console.log("help");
 			
@@ -46,6 +51,8 @@ function make_main_game_state( game )
 		if(cursors.right.isDown)
 		{
 			movRight = true;
+			movDown = false;
+			movUp = false;
 			movLeft = false;
 			console.log("help");
 			
