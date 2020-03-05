@@ -26,7 +26,7 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        var text = game.add.text( game.world.centerX, 15, "Test test.", style );
+        var text = game.add.text( game.world.centerX, 15, "Test test test.", style );
         text.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
     }
@@ -35,19 +35,29 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		if(cursors.left.isDown)
 		{
-			
+			movLeft = true;
+			movRight = false;
 			console.log("help");
-			bouncy.x -= 10;
+			bouncy.x -= 1;
 			//bouncy.body.moveLeft(400);
 			
 		}
 		if(cursors.right.isDown)
 		{
-			
+			movRight = true;
+			movLeft = false;
 			console.log("help");
-			bouncy.x += 10;
+			bouncy.x += 1;
 			//bouncy.body.moveLeft(400);
 			
+		}
+		if(movLeft)
+		{
+			bouncy.x -= 10;
+		}
+		if(movRight)
+		{
+			bouncy.x += 10;
 		}
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
