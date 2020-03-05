@@ -18,7 +18,7 @@ function make_main_game_state( game )
         bouncy.anchor.setTo( 0.5, 0.5 );
         
         // Turn on the arcade physics engine for this sprite.
-        game.physics.enable( bouncy, Phaser.Physics.ARCADE );
+        game.physics.enable( bouncy);
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
         
@@ -35,7 +35,7 @@ function make_main_game_state( game )
 		if(cursors.left.isDown)
 		{
 			console.log("help");
-			bouncy.body.moveLeft = 400;
+			bouncy.body.moveLeft(400);
 			
 		}
 		
