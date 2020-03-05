@@ -43,7 +43,7 @@ function make_main_game_state( game )
 	function eggGet(bouncy, egg)
 	{
 		eggs.remove(egg);
-		var egg2 = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
+		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
 		eggs.add(egg2);
 		score++;
 		console.log("egg: " + score);
