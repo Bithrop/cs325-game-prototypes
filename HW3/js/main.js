@@ -49,6 +49,7 @@ function make_main_game_state( game )
 		score++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
+		
 		texts.setText("Total eggs got: " + score);
 	}
 	
