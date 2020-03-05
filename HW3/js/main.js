@@ -84,11 +84,11 @@ function make_main_game_state( game )
 		}
 		if(movUp)
 		{
-			bouncy.y += 10;
+			bouncy.y -= 10;
 		}
 		if(movDown)
 		{
-			bouncy.y -= 10;
+			bouncy.y += 10;
 		}
         // Accelerate the 'logo' sprite towards the cursor,
         // accelerating at 500 pixels/second and moving no faster than 500 pixels/second
