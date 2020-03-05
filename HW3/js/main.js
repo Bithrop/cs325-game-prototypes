@@ -13,13 +13,14 @@ function make_main_game_state( game )
     var cursors;
 	var movLeft, movRight, movDown, movUp = false;
 	var eggs;
+	var egg;
 	var score = 0;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
 		eggs = game.add.group();
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
-		var egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
+		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
