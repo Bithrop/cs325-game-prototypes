@@ -42,17 +42,20 @@ function make_main_game_state( game )
     
 	function eggGet(bouncy, egg)
 	{
-		eggs.remove(egg);
-		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
-		eggs.add(egg);
+		//eggs.remove(egg);
+		//egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
+		//eggs.add(egg);
+		egg.kill();
 		score++;
 		console.log("egg: " + score);
+		egg.reset(game.world.randomX, game.world.randomY);
+		
 	}
 	
 	
     function update() {
 		//bouncy.body.setZeroVelocity;
-		game.physics.arcade.overlap(bouncy, eggs, eggGet, null, this);
+		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
 		if(cursors.left.isDown)
 		{
 			movLeft = true;
