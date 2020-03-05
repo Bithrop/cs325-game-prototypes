@@ -55,7 +55,7 @@ function make_main_game_state( game )
 		texts.setText("Total eggs got: " + score);
 	}
 	
-	function chickenLose()
+	function chickenLose(bouncy)
 	{
 		console.log("chicken is dead!!!!!!!!!!!!");
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
