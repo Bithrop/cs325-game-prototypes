@@ -29,6 +29,7 @@ function make_main_game_state( game )
 		noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'chicken' );
 		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
+		egg.anchor.setTo(0.5,0.5);
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
@@ -59,6 +60,7 @@ function make_main_game_state( game )
 		speed++;
 		console.log("egg: " + score);
 		egg.reset(game.world.randomX, game.world.randomY);
+		egg.anchor.setTo(0.5,0.5);
 		noise.play('cock');
 		texts.setText("Total eggs got: " + score);
 	}
