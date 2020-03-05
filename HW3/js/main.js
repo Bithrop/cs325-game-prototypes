@@ -33,8 +33,8 @@ function make_main_game_state( game )
         game.physics.enable( bouncy, Phaser.Physics.ARCADE);
 		game.physics.enable(egg, Phaser.Physics.ARCADE);
         // Make it bounce off of the world bounds.
-        bouncy.body.collideWorldBounds = true;
-		bouncy.body.checkCollision.none = true;
+        //bouncy.body.collideWorldBounds = true;
+		
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
@@ -131,6 +131,12 @@ function make_main_game_state( game )
 			bouncy.y += speed;
 		}
         
+		//testing
+		if(bouncy.x > game.world.length)
+		{
+			console.log("YAAAAAAAAY!");
+		}
+		
     }
     
     return { "preload": preload, "create": create, "update": update };
