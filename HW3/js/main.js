@@ -7,6 +7,7 @@ function make_main_game_state( game )
         game.load.image( 'logo', 'assets/phaser.png' );
 		game.load.spritesheet('chicken', 'assets/chicken.png', 32, 32);
 		game.load.image( 'egg', 'assets/egg.png' );
+		game.load.audio('cock', 'assets/Cockadoodledoo-sound.mp3');
     }
     
     var bouncy;
