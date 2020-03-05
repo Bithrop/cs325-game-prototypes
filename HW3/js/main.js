@@ -117,6 +117,7 @@ function make_main_game_state( game )
 		if(movLeft)
 		{
 			bouncy.x -= speed;
+			console.log("" + bouncy.x);
 		}
 		if(movRight)
 		{
@@ -132,7 +133,7 @@ function make_main_game_state( game )
 		}
         
 		//testing
-		if(bouncy.x < game.world.length)
+		if((bouncy.x < game.world.length))
 		{
 			console.log("YAAAAAAAAY!");
 		}
