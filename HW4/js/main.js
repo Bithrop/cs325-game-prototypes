@@ -80,7 +80,7 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
 		bouncy.events.onOutOfBounds.add(chickenLose,this);
-		bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 0, 500, 500 );
+		bouncy.rotation = game.physics.arcade.angleToPointer(bouncy);
 		//if statements for checking if it should switch to be going down, up, left or right
 		if(cursors.left.isDown)
 		{
