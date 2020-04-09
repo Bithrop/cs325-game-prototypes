@@ -22,6 +22,7 @@ function make_main_game_state( game )
 	var noise;
 	var farm;
 	var farmer;
+	var crow;
 	//for shooting stuff
 	var bullets;
 	var fireRate = 100;
