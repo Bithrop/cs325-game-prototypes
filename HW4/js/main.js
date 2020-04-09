@@ -15,9 +15,6 @@ function make_main_game_state( game )
     
     var bouncy;
     var cursors;
-	var movLeft, movRight, movDown, movUp = false;
-	var eggs;
-	var egg;
 	var score = 0;
 	var speed = 5;
 	var texts;
@@ -36,8 +33,7 @@ function make_main_game_state( game )
 		farm.anchor.setTo( 0.5, 0.5 );
 		noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'farmer' );
-		egg = game.add.sprite(game.world.randomX, game.world.randomY, 'egg');
-		egg.anchor.setTo(0.5,0.5);
+		
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
@@ -47,10 +43,10 @@ function make_main_game_state( game )
         //for testing
         // Turn on the arcade physics engine for this sprite.
         game.physics.enable( bouncy, Phaser.Physics.ARCADE);
-		game.physics.enable(egg, Phaser.Physics.ARCADE);
+		
         // Make it bounce off of the world bounds.
         bouncy.body.collideWorldBounds = true;
-		
+		bouncy.angle = 45;
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
@@ -73,26 +69,7 @@ function make_main_game_state( game )
 		
     }
     
-	function eggGet(bouncy, egg)
-	{
-		
-		egg.kill();
-		score++;
-		speed++;
-		console.log("egg: " + score);
-		egg.reset(game.world.randomX, game.world.randomY);
-		egg.anchor.setTo(0.5,0.5);
-		noise.play('cock');
-		texts.setText("Total eggs got: " + score);
-	}
 	
-	function chickenLose(bouncy)
-	{
-		console.log("chicken is dead!!!!!!!!!!!!");
-		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
-		bouncy.kill();
-	}
 	
 	function fire() {
 
@@ -113,8 +90,8 @@ function make_main_game_state( game )
 	
     function update() {
 		//bouncy.body.setZeroVelocity;
-		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
-		bouncy.events.onOutOfBounds.add(chickenLose,this);
+		
+		
 		bouncy.rotation = game.physics.arcade.angleToPointer(bouncy);
 		//if statements for checking if it should switch to be going down, up, left or right
 		if(cursors.left.isDown)
