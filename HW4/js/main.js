@@ -43,7 +43,7 @@ function make_main_game_state( game )
         game.physics.enable( bouncy, Phaser.Physics.ARCADE);
 		game.physics.enable(egg, Phaser.Physics.ARCADE);
         // Make it bounce off of the world bounds.
-        //bouncy.body.collideWorldBounds = true;
+        bouncy.body.collideWorldBounds = true;
 		
         
         // Add some text using a CSS style.
@@ -52,6 +52,7 @@ function make_main_game_state( game )
         texts = game.add.text( game.world.centerX, 15, "Total eggs got: " + score , style );
         texts.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
+		
     }
     
 	function eggGet(bouncy, egg)
@@ -79,6 +80,7 @@ function make_main_game_state( game )
 		//bouncy.body.setZeroVelocity;
 		game.physics.arcade.overlap(bouncy, egg, eggGet, null, this);
 		bouncy.events.onOutOfBounds.add(chickenLose,this);
+		bouncy.rotation = game.physics.arcade.accelerateToPointer( bouncy, game.input.activePointer, 0, 500, 500 );
 		//if statements for checking if it should switch to be going down, up, left or right
 		if(cursors.left.isDown)
 		{
