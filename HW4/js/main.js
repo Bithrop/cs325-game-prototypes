@@ -10,6 +10,7 @@ function make_main_game_state( game )
 		game.load.audio('cock', 'assets/Cockadoodledoo-sound.mp3');
 		game.load.image('farm', 'assets/farm.png');
 		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 64, 64);
+		game.load.image('bullet', 'assets/new_bullet.png');
     }
     
     var bouncy;
@@ -21,8 +22,13 @@ function make_main_game_state( game )
 	var speed = 5;
 	var texts;
 	var noise;
-	var farm
-	var farmer
+	var farm;
+	var farmer;
+	//for shooting stuff
+	var bullets;
+	var fireRate = 100;
+	var nextFire = 0;
+	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
 		noise = game.add.audio('cock');
@@ -53,6 +59,18 @@ function make_main_game_state( game )
         texts.anchor.setTo( 0.5, 0.0 );
 		cursors = game.input.keyboard.createCursorKeys();
 		
+		//shooting stuff for create
+		bullets = game.add.group();
+		bullets.enableBody = true;
+		bullets.physicsBodyType = Phaser.Physics.ARCADE;
+
+		bullets.createMultiple(50, 'bullet');
+		bullets.setAll('checkWorldBounds', true);
+		bullets.setAll('outOfBoundsKill', true);
+		
+		
+		
+		
     }
     
 	function eggGet(bouncy, egg)
@@ -75,6 +93,23 @@ function make_main_game_state( game )
 		var over = game.add.text(game.world.centerX, game.world.centerY, "Game Over", style);
 		bouncy.kill();
 	}
+	
+	function fire() {
+
+    if (game.time.now > nextFire && bullets.countDead() > 0)
+    {
+        nextFire = game.time.now + fireRate;
+
+        var bullet = bullets.getFirstDead();
+
+        bullet.reset(sprite.x - 8, sprite.y - 8);
+
+        game.physics.arcade.moveToPointer(bullet, 300);
+    }
+
+}
+	
+	
 	
     function update() {
 		//bouncy.body.setZeroVelocity;
@@ -115,34 +150,13 @@ function make_main_game_state( game )
 			
 		}
 		//if statements that actually move the player
-		if(movLeft)
+		if (game.input.activePointer.isDown)
 		{
-			bouncy.x -= speed;
-			console.log("" + bouncy.x);
-		}
-		if(movRight)
-		{
-			bouncy.x += speed;
-		}
-		if(movUp)
-		{
-			bouncy.y -= speed;
-		}
-		if(movDown)
-		{
-			console.log("" + bouncy.y);
-			bouncy.y += speed;
+        fire();
 		}
         
 		//testing for kill
-		if((bouncy.x <( game.world.length - 20)) || (bouncy.x > 820) || (bouncy.y > 620) || (bouncy.y < 0))
-		{
-			console.log("chicken is dead!!!!!!!!!!!!");
-			var style = { font: "25px Verdana", fill: "#9509cf", align: "center" };
-			var over = game.add.text(game.world.centerX - 110, game.world.centerY, "Better luck next time\n Your score is: " + score, style);
-			bouncy.kill();
-			texts.kill();
-		}
+		
 		
     }
     
