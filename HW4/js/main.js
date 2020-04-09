@@ -102,7 +102,7 @@ function make_main_game_state( game )
 
         var bullet = bullets.getFirstDead();
 
-        bullet.reset(sprite.x - 8, sprite.y - 8);
+        bullet.reset(bouncy.x - 8, bouncy.y - 8);
 
         game.physics.arcade.moveToPointer(bullet, 300);
     }
