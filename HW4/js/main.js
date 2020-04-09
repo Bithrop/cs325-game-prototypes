@@ -9,7 +9,7 @@ function make_main_game_state( game )
 		game.load.image( 'egg', 'assets/egg.png' );
 		game.load.audio('cock', 'assets/Cockadoodledoo-sound.mp3');
 		game.load.image('farm', 'assets/farm.png');
-		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 32, 32);
+		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 64, 64);
     }
     
     var bouncy;
