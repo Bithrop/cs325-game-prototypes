@@ -11,6 +11,7 @@ function make_main_game_state( game )
 		game.load.image('farm', 'assets/farm.png');
 		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 64, 64);
 		game.load.image('bullet', 'assets/new_bullet.png');
+		game.load.image('crow', 'assets/raven-black0001.png');
     }
     
     var bouncy;
