@@ -84,10 +84,7 @@ function make_main_game_state( game )
 		//if statements for checking if it should switch to be going down, up, left or right
 		if(cursors.left.isDown)
 		{
-			movLeft = true;
-			movUp = false
-			movDown = false;
-			movRight = false;
+			bouncy.x -= speed
 			console.log("help");
 			
 			//bouncy.body.moveLeft(400);
@@ -95,10 +92,7 @@ function make_main_game_state( game )
 		}
 		if(cursors.right.isDown)
 		{
-			movRight = true;
-			movDown = false;
-			movUp = false;
-			movLeft = false;
+			bouncy.x += speed;
 			console.log("help");
 			
 			//bouncy.body.moveLeft(400);
@@ -106,10 +100,7 @@ function make_main_game_state( game )
 		}
 		if(cursors.up.isDown)
 		{
-			movRight = false;
-			movLeft = false;
-			movDown = false;
-			movUp = true;
+			bouncy.y -= speed;
 			console.log("help2");
 			
 			//bouncy.body.moveLeft(400);
@@ -117,10 +108,7 @@ function make_main_game_state( game )
 		}
 		if(cursors.down.isDown)
 		{
-			movRight = false;
-			movLeft = false;
-			movUp = false;
-			movDown = true;
+			bouncy.y += speed;
 			console.log("help2");
 			
 			//bouncy.body.moveLeft(400);
