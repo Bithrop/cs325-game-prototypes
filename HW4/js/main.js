@@ -28,6 +28,7 @@ function make_main_game_state( game )
 	var bullets;
 	var fireRate = 100;
 	var nextFire = 0;
+	var text;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -54,8 +55,7 @@ function make_main_game_state( game )
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
         var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-        texts = game.add.text( game.world.centerX, 15, "Total eggs got: " + score , style );
-        texts.anchor.setTo( 0.5, 0.0 );
+        
 		cursors = game.input.keyboard.createCursorKeys();
 		
 		//shooting stuff for create
