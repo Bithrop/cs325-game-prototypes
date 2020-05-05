@@ -23,6 +23,7 @@ function make_main_game_state( game )
 	var farm;
 	var farmer;
 	var crow;
+	var crows;
 	//for shooting stuff
 	var bullets;
 	var fireRate = 100;
@@ -71,6 +72,8 @@ function make_main_game_state( game )
 		crow = game.add.sprite( 500, 500, 'crow' );
 		game.physics.enable(crow, Phaser.Physics.ARCADE);
 		game.physics.arcade.moveToXY(crow,0,0,400);
+		
+		crows = game.add.group();
     }
     
 	
