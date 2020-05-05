@@ -28,7 +28,7 @@ function make_main_game_state( game )
 	var bullets;
 	var fireRate = 100;
 	var nextFire = 0;
-	var text;
+	var texts;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -77,7 +77,7 @@ function make_main_game_state( game )
 		crows = game.add.group();
 		createCrows();
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		var text = game.add.text( game.world.centerX, 15, "Score: " + score, style );
+		 texts = game.add.text( game.world.centerX, 15, "Score: " + score, style );
         text.anchor.setTo( 0.5, 0.0 );
     }
     
@@ -117,7 +117,7 @@ function make_main_game_state( game )
 		bullet.kill();
 		crow.kill();
 		score =+ 10;
-		text.setText("Score: " + score);
+		texts.setText("Score: " + score);
 		
 		if (crows.countLiving() == 0)
 		{
