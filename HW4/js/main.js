@@ -34,7 +34,7 @@ function make_main_game_state( game )
 		//noise = game.add.audio('cock');
 		farm = game.add.sprite(game.world.centerX, game.world.centerY, 'farm');
 		farm.anchor.setTo( 0.5, 0.5 );
-		noise.addMarker('cock', 0, 5.0);
+		//noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'farmer' );
 		
         // Anchor the sprite at its center, as opposed to its top-left corner.
