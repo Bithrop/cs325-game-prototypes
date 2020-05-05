@@ -12,7 +12,7 @@ function make_main_game_state( game )
 		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 64, 64);
 		game.load.image('bullet', 'assets/new_bullet.png');
 		game.load.image('crow', 'assets/raven-black0001.png');
-		game.load.image('peas', 'assets/peas1.png' );
+		game.load.image('peas1', 'assets/peas1.png' );
     }
     
     var bouncy;
@@ -38,7 +38,7 @@ function make_main_game_state( game )
 		farm.anchor.setTo( 0.5, 0.5 );
 		//noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'farmer' );
-		peas = game.add.sprite( game.world.centerX, 500, 'peas' );
+		peas = game.add.sprite( game.world.centerX, 500, 'peas1' );
 		peas.anchor.setTo(0.5,0.5);
 		peas.scale.setTo(0.5,0.5);
         // Anchor the sprite at its center, as opposed to its top-left corner.
@@ -80,7 +80,7 @@ function make_main_game_state( game )
 		crows = game.add.group();
 		createCrows();
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		 texts = game.add.text( game.world.centerX, 15, "Score!: " + score, style );
+		 texts = game.add.text( game.world.centerX, 15, "Score!!: " + score, style );
         texts.anchor.setTo( 0.5, 0.0 );
     }
     
