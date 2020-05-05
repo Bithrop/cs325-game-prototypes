@@ -69,12 +69,13 @@ function make_main_game_state( game )
 		
 		
 		
-		crow = game.add.sprite( 500, 500, 'crow' );
-		crow.scale.setTo(0.1,0.1);
-		game.physics.enable(crow, Phaser.Physics.ARCADE);
-		game.physics.arcade.moveToXY(crow,0,0,400);
+		//crow = game.add.sprite( 500, 500, 'crow' );
+		//crow.scale.setTo(0.1,0.1);
+		//game.physics.enable(crow, Phaser.Physics.ARCADE);
+		//game.physics.arcade.moveToXY(crow,0,0,400);
 		
 		crows = game.add.group();
+		createCrows();
     }
     
 	
@@ -95,7 +96,18 @@ function make_main_game_state( game )
 }
 	
 	
-	
+	function createCrows()
+	{
+		
+		for(var i = 0; i < 4; i++)
+		{
+			var crow = crows.create(i * 45, game.world.centerY, 'crow');
+			crow.scale.setTo(0.1,0.1);
+			game.physics.enable(crow, Phaser.Physics.ARCADE);
+			game.physics.arcade.moveToXY(crow,game.world.centerX,game.world.centerY,300);
+		}
+		
+	}
     function update() {
 		//bouncy.body.setZeroVelocity;
 		
