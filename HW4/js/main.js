@@ -12,7 +12,7 @@ function make_main_game_state( game )
 		game.load.spritesheet('farmer', 'assets/oldman_walk_sheet.png', 64, 64);
 		game.load.image('bullet', 'assets/new_bullet.png');
 		game.load.image('crow', 'assets/raven-black0001.png');
-		//game.load.image('peas1', 'assets/peas2.png' );
+		game.load.image('peas1', 'assets/peas2.png' );
     }
     
     var bouncy;
