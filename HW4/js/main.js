@@ -29,6 +29,7 @@ function make_main_game_state( game )
 	var fireRate = 100;
 	var nextFire = 0;
 	var texts;
+	var peas;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
