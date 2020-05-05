@@ -17,7 +17,7 @@ function make_main_game_state( game )
     var bouncy;
     var cursors;
 	var score = 0;
-	var speed = 5;
+	var speed = 30;
 	var texts;
 	var noise;
 	var farm;
