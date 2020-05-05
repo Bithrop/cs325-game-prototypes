@@ -114,6 +114,11 @@ function make_main_game_state( game )
 		bullet.kill();
 		crow.kill();
 		
+		if (crows.countLiving() == 0)
+		{
+			createCrows();
+		}
+		
 	}
 	
 	
