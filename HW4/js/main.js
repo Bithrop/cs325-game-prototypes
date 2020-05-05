@@ -79,7 +79,7 @@ function make_main_game_state( game )
 		crows = game.add.group();
 		createCrows();
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		 texts = game.add.text( game.world.centerX, 15, "Score: " + score, style );
+		 texts = game.add.text( game.world.centerX, 15, "Score!: " + score, style );
         texts.anchor.setTo( 0.5, 0.0 );
     }
     
