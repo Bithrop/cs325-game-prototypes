@@ -77,7 +77,7 @@ function make_main_game_state( game )
 		createCrows();
 		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
 		 texts = game.add.text( game.world.centerX, 15, "Score: " + score, style );
-        text.anchor.setTo( 0.5, 0.0 );
+        texts.anchor.setTo( 0.5, 0.0 );
     }
     
 	
