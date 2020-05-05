@@ -101,7 +101,7 @@ function make_main_game_state( game )
 		
 		for(var i = 0; i < 4; i++)
 		{
-			var crow = crows.create(i * 45, game.world.centerY, 'crow');
+			var crow = crows.create(i * 100, 500, 'crow');
 			crow.scale.setTo(0.1,0.1);
 			game.physics.enable(crow, Phaser.Physics.ARCADE);
 			game.physics.arcade.moveToXY(crow,game.world.centerX,game.world.centerY,300);
