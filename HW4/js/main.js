@@ -70,7 +70,7 @@ function make_main_game_state( game )
 		
 		
 		crow = game.add.sprite( 500, 500, 'crow' );
-		crow.scale.setTo(0.75,0.75);
+		crow.scale.setTo(0.1,0.1);
 		game.physics.enable(crow, Phaser.Physics.ARCADE);
 		game.physics.arcade.moveToXY(crow,0,0,400);
 		
