@@ -118,6 +118,7 @@ function make_main_game_state( game )
 		crow.kill();
 		score =+ 10;
 		text.setText("Score: " + score);
+		
 		if (crows.countLiving() == 0)
 		{
 			createCrows();
