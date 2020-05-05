@@ -101,13 +101,22 @@ function make_main_game_state( game )
 		
 		for(var i = 0; i < 4; i++)
 		{
-			var crow = crows.create(i * 100, 200, 'crow');
+			var crow = crows.create(i * 100, 100, 'crow');
 			crow.scale.setTo(0.1,0.1);
 			game.physics.enable(crow, Phaser.Physics.ARCADE);
 			game.physics.arcade.moveToXY(crow,game.world.centerX,game.world.centerY,300);
 		}
 		
 	}
+	
+	function collisionHandler(bullet, crow)
+	{
+		bullet.kill();
+		crow.kill();
+		
+	}
+	
+	
     function update() {
 		//bouncy.body.setZeroVelocity;
 		
@@ -153,7 +162,7 @@ function make_main_game_state( game )
 		}
         
 		//testing for kill
-		
+		game.physics.arcade.overlap(bullets, crows, collisionHandler, null, this);
 		
     }
     
