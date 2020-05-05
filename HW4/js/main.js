@@ -17,7 +17,7 @@ function make_main_game_state( game )
     var bouncy;
     var cursors;
 	var score = 0;
-	var speed = 30;
+	var speed = 5;
 	var texts;
 	var noise;
 	var farm;
@@ -70,6 +70,7 @@ function make_main_game_state( game )
 		
 		
 		crow = game.add.sprite( 500, 500, 'crow' );
+		crow.scale.setTo(0.75,0.75);
 		game.physics.enable(crow, Phaser.Physics.ARCADE);
 		game.physics.arcade.moveToXY(crow,0,0,400);
 		
