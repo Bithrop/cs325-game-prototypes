@@ -18,7 +18,6 @@ function make_main_game_state( game )
     var cursors;
 	var score = 0;
 	var speed = 5;
-	var texts;
 	var noise;
 	var farm;
 	var farmer;
