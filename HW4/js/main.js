@@ -38,9 +38,9 @@ function make_main_game_state( game )
 		farm.anchor.setTo( 0.5, 0.5 );
 		//noise.addMarker('cock', 0, 5.0);
         bouncy = game.add.sprite( game.world.centerX, game.world.centerY, 'farmer' );
-		peas = game.add.sprite( game.world.centerX, game.world.centerY, 'peas' );
+		peas = game.add.sprite( game.world.centerX, 500, 'peas' );
 		peas.anchor.setTo(0.5,0.5);
-		peas.scale.setTo(0.1,0.1);
+		peas.scale.setTo(1,1);
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
