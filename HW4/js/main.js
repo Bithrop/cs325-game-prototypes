@@ -30,6 +30,7 @@ function make_main_game_state( game )
 	var nextFire = 0;
 	var texts;
 	var peas;
+	var wave = 1;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -79,9 +80,11 @@ function make_main_game_state( game )
 		
 		crows = game.add.group();
 		createCrows();
-		var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
+		//var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
 		 texts = game.add.text( game.world.centerX, 15, "Score!!: " + score, style );
         texts.anchor.setTo( 0.5, 0.0 );
+		var waveText = game.add.text( 15, 15, "Wave " + wave, style );
+		waveText.anchor.setTo( 0.5, 0.0 );
     }
     
 	
@@ -124,6 +127,7 @@ function make_main_game_state( game )
 		
 		if (crows.countLiving() == 0)
 		{
+			waveText.setText("Wave " + wave);
 			createCrows();
 		}
 		
