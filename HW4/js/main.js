@@ -32,6 +32,7 @@ function make_main_game_state( game )
 	var peas;
 	var wave = 1;
 	var waveText;
+	var style;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -60,7 +61,7 @@ function make_main_game_state( game )
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
-        var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
+        style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
         
 		cursors = game.input.keyboard.createCursorKeys();
 		
