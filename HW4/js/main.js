@@ -141,7 +141,7 @@ function make_main_game_state( game )
 	{
 		crows.removeAll();
 		peas.kill()
-		var overText = game.add.text( game.world.centerX, game.world.centerY, "Game Over: \n The crows eat your peas!" +, style );
+		var overText = game.add.text( game.world.centerX, game.world.centerY, "Game Over: \n The crows eat your peas!", style );
 		overText.anchor.setTo( 0.5, 0.0 );
 	}
 	
