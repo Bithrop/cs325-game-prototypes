@@ -33,6 +33,7 @@ function make_main_game_state( game )
 	var wave = 1;
 	var waveText;
 	var style;
+	var crowSpeed = 300;
 	
     function create() {
         // Create a sprite at the center of the screen using the 'logo' image.
@@ -84,7 +85,7 @@ function make_main_game_state( game )
 		crows = game.add.group();
 		createCrows();
 		//var style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
-		 texts = game.add.text( game.world.centerX, 15, "Score!!: " + score, style );
+		 texts = game.add.text( game.world.centerX, 15, "Score: " + score, style );
         texts.anchor.setTo( 0.5, 0.0 );
 		waveText = game.add.text( 60, 15, "Wave " + wave, style );
 		waveText.anchor.setTo( 0.5, 0.0 );
@@ -111,12 +112,12 @@ function make_main_game_state( game )
 	function createCrows()
 	{
 		
-		for(var i = 0; i < 4; i++)
+		for(var i = 0; i < wave; i++)
 		{
 			var crow = crows.create(i * 100, 100, 'crow');
 			crow.scale.setTo(0.1,0.1);
 			game.physics.enable(crow, Phaser.Physics.ARCADE);
-			game.physics.arcade.moveToXY(crow,game.world.centerX,500,300);
+			game.physics.arcade.moveToXY(crow,game.world.centerX,500,crowSpeed);
 		}
 		
 	}
@@ -130,9 +131,11 @@ function make_main_game_state( game )
 		
 		if (crows.countLiving() == 0)
 		{
+			crowSpeed += 10;
 			wave++;
 			waveText.setText("Wave " + wave);
 			createCrows();
+			
 		}
 		
 	}
