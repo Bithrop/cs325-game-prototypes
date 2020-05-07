@@ -43,6 +43,7 @@ function make_main_game_state( game )
 		peas = game.add.sprite( game.world.centerX, 500, 'peas1' );
 		peas.anchor.setTo(0.5,0.5);
 		peas.scale.setTo(0.05,0.05);
+		game.physics.enable(peas, Phaser.Physics.ARCADE);
         // Anchor the sprite at its center, as opposed to its top-left corner.
         // so it will be truly centered.
         bouncy.anchor.setTo( 0.5, 0.5 );
@@ -135,6 +136,13 @@ function make_main_game_state( game )
 		
 	}
 	
+	function GameOver (peas, crow)
+	{
+		crows.removeAll();
+		peas.kill()
+		var overText = game.add.text( game.world.centerX, game.world.centerY, "Game Over: \n The crows eat your peas!" + score, style );
+	}
+	
 	
     function update() {
 		//bouncy.body.setZeroVelocity;
@@ -182,7 +190,7 @@ function make_main_game_state( game )
         
 		//testing for kill
 		game.physics.arcade.overlap(bullets, crows, collisionHandler, null, this);
-		
+		game.physics.arcade.overlap(peas, crows, GameOver, null, this);
     }
     
     return { "preload": preload, "create": create, "update": update };
