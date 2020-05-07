@@ -127,6 +127,7 @@ function make_main_game_state( game )
 		
 		if (crows.countLiving() == 0)
 		{
+			wave++;
 			waveText.setText("Wave " + wave);
 			createCrows();
 		}
