@@ -61,7 +61,7 @@ function make_main_game_state( game )
         
         // Add some text using a CSS style.
         // Center it in X, and position its top 15 pixels from the top of the world.
-        style = { font: "25px Verdana", fill: "#9999ff", align: "center" };
+        style = { font: "25px Verdana", fill: "#9912rq", align: "center" };
         
 		cursors = game.input.keyboard.createCursorKeys();
 		
